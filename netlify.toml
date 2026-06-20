@@ -1,0 +1,21 @@
+[[redirects]]
+  from = "/il-punto"
+  to = "/il-punto.html"
+  status = 200
+
+[[redirects]]
+  from = "/grazie"
+  to = "/thank-you.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "public, max-age=3600"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=600"
